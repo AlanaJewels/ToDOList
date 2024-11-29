@@ -1,0 +1,146 @@
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    color: #333;
+    transition: background 0.3s;
+}
+
+/* Theme-Specific Styling */
+body.dark-theme {
+    background: linear-gradient(to right, #2c3e50, #4ca1af);
+    color: #fff;
+}
+
+/* To-Do List Styling for Dark Mode */
+body.dark-theme #todo-list li {
+    background-color: #e5a7e6; /* Dark background for tasks */
+    color: #fff; /* Keep task text white in dark mode */
+}
+
+/* Ensure task text stays black in dark mode */
+body.dark-theme #todo-list li span {
+    color: #000; /* Keep task text black */
+}
+
+/* Header Styling */
+header h1 {
+    font-family: 'Lobster', cursive;
+    font-size: 2.5rem;
+    color: #ff6f61;
+}
+
+/* Buttons */
+button {
+    padding: 10px 20px;
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+button:hover {
+    transform: scale(1.1);
+    background-color: #ffa07a;
+}
+
+#theme-toggle {
+    background-color: #5F9EA0;
+    margin: 10px;
+}
+
+/* Inputs */
+input[type="text"] {
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 15px;
+    width: 70%;
+    margin-right: 10px;
+}
+
+select {
+    padding: 10px;
+    border-radius: 15px;
+}
+
+/* To-Do List */
+#todo-list li {
+    background-color: #fff;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, background-color 0.3s;
+}
+
+#todo-list li:hover {
+    transform: scale(1.02);
+    background-color: #fbecec;
+}
+
+/* Priority and Category Styling */
+.priority-high {
+    color: red;
+}
+
+.priority-medium {
+    color: orange;
+}
+
+.priority-low {
+    color: green;
+}
+
+/* Progress Bar */
+#progress-bar {
+    height: 10px;
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+#progress-fill {
+    height: 100%;
+    width: 0;
+    background-color: #5F9EA0;
+    transition: width 0.3s;
+}
+
+/* Animations */
+.slide-in {
+    transform: translateY(-20px);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Spinner */
+#loading-spinner {
+    display: none;
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #ff6f61;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

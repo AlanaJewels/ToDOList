@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cute To-Do List</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="ToDo.css">
+    <script src="ToDo.js" defer></script>
+</head>
+<body>
+    <div id="app-container">
+        <header>
+            <h1>🐾 My Cute To-Do List</h1>
+        </header>
+        <div id="theme-switcher">
+            <button id="theme-toggle">🌙 Dark Mode</button>
+        </div>
+        <div id="filters">
+            <form id="todo-form">
+                <input type="text" id="todo-input" placeholder="Add a new task...">
+                
+                <!-- Priority selection -->
+                <div id="priority-container">
+                    <label>
+                        <input type="radio" name="priority" value="Low" checked> Low
+                    </label>
+                    <label>
+                        <input type="radio" name="priority" value="Medium"> Medium
+                    </label>
+                    <label>
+                        <input type="radio" name="priority" value="High"> High
+                    </label>
+                </div>
+
+                <button type="submit">Add Task</button>
+            </form>
+
+            <!-- Search & Filter -->
+            <input type="text" id="search-input" placeholder="Search tasks...">
+            <select id="category-filter">
+                <option value="">All Categories</option>
+                <option value="Work">Work</option>
+                <option value="Personal">Personal</option>
+                <option value="Urgent">Urgent</option>
+            </select>
+        </div>
+
+        <!-- Todo List -->
+        <ul id="todo-list"></ul>
+
+        <!-- Progress Bar -->
+        <div id="progress">
+            <p>Progress: <span id="progress-percentage">0% 🐢</span></p>
+            <div id="progress-bar">
+                <div id="progress-fill"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Spinner (If Needed) -->
+    <div id="loading-spinner"></div>
+</body>
+</html>
